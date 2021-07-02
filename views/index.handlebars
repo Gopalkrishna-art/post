@@ -1,57 +1,71 @@
 <h1>DATA OUTPUT</h1>
 <div class="m1">
-<table id="first">
-<tr class="tr1"><th>Years</th><th>MatchesPlayed</th></tr>
-  <tr>
+  <table id="first">
+    <tr class="tr1">
+      <th>Years</th>
+      <th>MatchesPlayed</th>
+    </tr>
+    <tr>
       {{#each matchesPlayedPer}}
-      
-    <th>{{this.year}}</th>
-    <th>{{this.matchesplayed}}</th>
-   
-  </tr>
-{{/each}}
-</table>
+
+      <th>{{this.year}}</th>
+      <th>{{this.matchesplayed}}</th>
+
+    </tr>
+    {{/each}}
+  </table>
 </div>
-    
+
 <div class="m2">
-    <table id="second">
-        <tr class="tr1"><th>Years</th><th>Teams</th><th>MatchesWon</th></tr>
-  <tr>
+  <table id="second">
+    <tr class="tr1">
+      <th>Years</th>
+      <th>Teams</th>
+      <th>MatchesWon</th>
+    </tr>
+    <tr>
       {{#each matchesWonPerteam}}
-    <th>{{this.year}}</th>
-    <th>{{this.name}}</th>
-    <th>{{this.count}}</th>
-  </tr>
-{{/each}}
-</table>
+      <th>{{this.year}}</th>
+      <th>{{this.name}}</th>
+      <th>{{this.count}}</th>
+    </tr>
+    {{/each}}
+  </table>
 </div>
 
 
 <div class="m3">
-<table id="third">
-<tr class="tr1"><th>Teams</th><th>ExtraRuns</th></tr>
-  <tr>
+  <table id="third">
+    <tr class="tr1">
+      <th>Teams</th>
+      <th>ExtraRuns</th>
+    </tr>
+    <tr>
       {{#each extraRun2016}}
-      
-    <th>{{this.name}}</th>
-    <th>{{this.sum}}</th>
-   
-  </tr>
-{{/each}}
-</table>
+
+      <th>{{this.name}}</th>
+      <th>{{this.sum}}</th>
+
+    </tr>
+    {{/each}}
+  </table>
 </div>
 
 
 <div class="m4">
-<table id="fourth">
-<tr class="tr1"><th>Years</th><th>Bowlers</th><th>Economy</th></tr>
-  <tr>
+  <table id="fourth">
+    <tr class="tr1">
+      <th>Years</th>
+      <th>Bowlers</th>
+      <th>Economy</th>
+    </tr>
+    <tr>
       {{#each topEcomical}}
-      
-    <th>{{this.year}}</th>
-    <th>{{this.bowler }}</th>
-   <th>{{this.economy }}</th>
-  </tr>
-{{/each}}
-</table>
+
+      <th>{{this.year}}</th>
+      <th>{{this.bowler }}</th>
+      <th>{{this.economy }}</th>
+    </tr>
+    {{/each}}
+  </table>
 </div>
