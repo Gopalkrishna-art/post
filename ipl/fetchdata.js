@@ -1,13 +1,13 @@
 const csv = require('csvtojson');
 const {
-    matchesFilePath,
-    deliveriesFilePath
+    MATCHES_FILE_PATH,
+    DELIVERIES_FILE_PATH
 } = require('../ipl/constants.js');
 
 async function fetchData() {
     try {
-        const matchesDataPromise = await csv().fromFile(matchesFilePath);
-        const deliveriesDataPromise = await csv().fromFile(deliveriesFilePath);
+        const matchesDataPromise = await csv().fromFile(MATCHES_FILE_PATH);
+        const deliveriesDataPromise = await csv().fromFile(DELIVERIES_FILE_PATH);
 
         return [matchesDataPromise, deliveriesDataPromise];
     } catch (err) {

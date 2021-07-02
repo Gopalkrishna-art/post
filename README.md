@@ -5,7 +5,7 @@ In this project, we are attempting to solve the problems listed below using Post
 
 ## Data
 
-Data take from Kaggle<a src="https://www.kaggle.com/manasgarg/ipl%22%3E https://www.kaggle.com/manasgarg/ipl</a>
+Data take from Kaggle link:https://www.kaggle.com/manasgarg/ipl%22%3E https://www.kaggle.com/manasgarg/ipl
 
 
 - deliveries.csv
@@ -65,12 +65,18 @@ Install the Handlebars
 `npm install express-handlebars`
 
 
-#### How to use project
+#### How to run the project
 
 * INSTALL all the requirements.
 
-* Create the database and run connection.js to normalize the database and get the output.
+* Create the database and run connection.js to normalize the database. 
 
-* Use command {node express.js} to start the express server.  
+* Once all the requirements are done use command {node index.js} in terminal to start the express server. 
+
+
+
+
+
+
 
 
