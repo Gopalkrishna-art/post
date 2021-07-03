@@ -74,6 +74,8 @@ Install the Handlebars
 * Once all the requirements are done use command {node index.js} in terminal to start the express server. 
 
 
+## Demo gift vedio for preview
+https://github.com/Gopalkrishna-art/post/tree/master/ipl/demo.gif
 
 
 

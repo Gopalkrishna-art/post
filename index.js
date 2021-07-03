@@ -1,10 +1,10 @@
 const express = require('express');
 const path = require('path');
-const matchesPlayed = require('./queries/matchesPlayedPerTeam.js')
-const matchesWon = require('./queries/matchesWonPerTeam.js')
+const expHbs = require('express-handlebars');
+const matchesPlayed = require('./queries/matchesPlayedPerTeam.js');
+const matchesWon = require('./queries/matchesWonPerTeam.js');
 const topBowlerss = require('./queries/topEconomicBowlers.js');
 const logger = require('./logger.js');
-const expHbs = require('express-handlebars');
 const extraRunss = require('./queries/extraRuns.js');
 
 const app = express();
@@ -12,9 +12,12 @@ const PORT = process.env.PORT || 5000;
 
 app.use(logger);
 
-app.engine('handlebars', expHbs({
-    defaultLayout: 'main'
-}))
+app.engine(
+  'handlebars',
+  expHbs({
+    defaultLayout: 'main',
+  })
+);
 app.set('view engine', 'handlebars');
 
 let matchesPlayedPer;
@@ -23,24 +26,26 @@ let extraRun2016;
 let topEcomical;
 
 (async function playedData() {
-    matchesPlayedPer = await matchesPlayed();
+  matchesPlayedPer = await matchesPlayed();
 })();
 (async function wonData() {
-    matchesWonPerteam = await matchesWon();
+  matchesWonPerteam = await matchesWon();
 })();
 (async function extraData() {
-    extraRun2016 = await extraRunss();
+  extraRun2016 = await extraRunss();
 })();
 (async function topData() {
-    topEcomical = await topBowlerss();
+  topEcomical = await topBowlerss();
 })();
 
-app.get('/', (req, res) => res.render('index', {
+app.get('/', (req, res) =>
+  res.render('index', {
     matchesPlayedPer,
     matchesWonPerteam,
     extraRun2016,
-    topEcomical
-}));
+    topEcomical,
+  })
+);
 //  app.use(express.static(path.join(__dirname, '')));
 
 app.listen(PORT, () => console.log(`Server started at ${PORT}`));

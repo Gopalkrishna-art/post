@@ -1,18 +1,15 @@
 const csv = require('csvtojson');
-const {
-    MATCHES_FILE_PATH,
-    DELIVERIES_FILE_PATH
-} = require('../ipl/constants.js');
+const { MATCHES_FILE_PATH, DELIVERIES_FILE_PATH } = require('./constants.js');
 
 async function fetchData() {
-    try {
-        const matchesDataPromise = await csv().fromFile(MATCHES_FILE_PATH);
-        const deliveriesDataPromise = await csv().fromFile(DELIVERIES_FILE_PATH);
+  try {
+    const matchesDataPromise = await csv().fromFile(MATCHES_FILE_PATH);
+    const deliveriesDataPromise = await csv().fromFile(DELIVERIES_FILE_PATH);
 
-        return [matchesDataPromise, deliveriesDataPromise];
-    } catch (err) {
-        console.log(err);
-    }
+    return [matchesDataPromise, deliveriesDataPromise];
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 module.exports = fetchData;

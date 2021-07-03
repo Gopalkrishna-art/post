@@ -1,0 +1,52 @@
+#first {
+    display: flex;
+    border: 1px solid;
+    border-collapse: collapse;
+
+}
+
+#second {
+    border: 1px solid;
+    border-collapse: collapse;
+
+}
+
+#third {
+    border: 1px solid;
+    border-collapse: collapse;
+
+}
+
+#fourth {
+    border: 1px solid;
+    border-collapse: collapse;
+
+}
+
+th {
+    border: 1px solid;
+    width: 500px;
+    text-align: center;
+}
+
+.m2 {
+    height: 400px;
+    overflow: auto;
+}
+
+.tr1 {
+    background-color: black;
+    color: blanchedalmond;
+    font-size: x-large;
+}
+
+.m1,
+.m2,
+.m3,
+.m4 {
+    margin-left: 300px;
+    margin-top: 50px;
+    width: 1000px;
+    background-color: aqua;
+    background-image: radial-gradient(circle, red, yellow, green);
+}
